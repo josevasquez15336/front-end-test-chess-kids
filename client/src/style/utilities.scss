@@ -1,0 +1,39 @@
+$screen-sm-min: 1024px;
+$background-color:#64A343;
+$link-color:#FFE205;
+$border-radius: 16px;
+$text-color: rgba(255, 255, 255, 1);
+$text-color-inactive: rgba(255, 255, 255, 0.6);
+$item-background:rgba(0,0,0,.1);
+
+@mixin rounded { 
+    border-radius: $border-radius;
+    background: $item-background;
+}
+
+@mixin text-font {
+     font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode"; 
+}
+
+@mixin heading-font {
+    font-family: "LuckiestGuy", "Lucida Grande", "Lucida Sans Unicode";
+    letter-spacing: 0.1em;
+
+}
+
+@mixin active { 
+    border-radius: $border-radius;
+    background-color:$background-color;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@mixin active-mobile { 
+    background-color:$background-color;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+@mixin sm {
+    @media (max-width: #{$screen-sm-min}) {
+        @content;
+    }
+ }
