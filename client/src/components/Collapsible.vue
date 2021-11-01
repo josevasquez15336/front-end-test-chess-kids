@@ -16,10 +16,10 @@ export default defineComponent({
       default: false
     }},
     setup(props){
-      const mystyle = ref<any>({ height: 0 })
-      const content = ref<any>(null)
+      const mystyle = ref<Record<string, number | string>>({ height: 0 })
+      const content = ref<HTMLElement | null>(null)
       const applyState = () => {
-       mystyle.value.height = props.open ? content.value.clientHeight + 'px' : 0
+       if (content.value != null) mystyle.value.height = props.open ? content.value.clientHeight + 'px' : 0
       }
 
       onMounted(() => {

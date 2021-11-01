@@ -30,9 +30,10 @@ export default defineComponent({
       }, 1500);
     }
     const value = computed(() => store.state.searchInput);
-    const updateValue = (e:any) => {
+
+    const updateValue = (e:Event) => {
       loading()
-      store.dispatch(ActionTypes.UpdateSearchInput, e.target.value)
+      store.dispatch(ActionTypes.UpdateSearchInput, (e.target as HTMLInputElement).value)
       }
 
     return {
