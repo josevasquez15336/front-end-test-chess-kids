@@ -1,4 +1,4 @@
-# ![Logo](./assets/logo.png) Front-end test
+# ![Logo](./assets/logo.png) Front-end test. Preview https://front-end-test-chess-kids.web.app/home
 
 ## Requirements
 - Node.js 12+
